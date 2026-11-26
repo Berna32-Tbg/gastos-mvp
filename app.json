@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Gastos MVP",
+    "slug": "gastos-mvp",
+    "scheme": "gastosmvp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.example.gastosmvp",
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.example.gastosmvp",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true
+        }
+      ],
+      "expo-secure-store",
+      "expo-notifications",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Para fotografiar tus tickets"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Para desbloquear la app"
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "6554126a-6b7a-4fb7-9ecd-bd52130c4069"
+      }
+    }
+  }
+}
